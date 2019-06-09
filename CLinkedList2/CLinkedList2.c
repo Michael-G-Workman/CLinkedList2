@@ -61,7 +61,7 @@ const char* getEnumNameAnimalSex(enum AnimalSex animalSex) {
 void searchAnimals(enum AnimalType animalType, struct zooAnimal* animalList)
 {
 	// loop through list, finding matching animals
-	while (animalList != 0)
+	while (animalList != NULL)
 	{
 		if (animalList->type == animalType) {
 
@@ -185,10 +185,10 @@ int main()
 	// search for specific animal type
 	searchAnimals(Lion, zooKeeper);
 
-	printf("Traversing Animal List Forwards!!\n=================================\n\n");
+	printf("Traversing Animal List Forward!!\n=================================\n\n");
 
 	// traverse the linked list moving forward
-	while (zooKeeper != 0) {
+	while (zooKeeper != NULL) {
 
 		printf("%d year old, %d pound %s %s\n\n",
 			zooKeeper->age,
@@ -205,7 +205,7 @@ int main()
 	printf("Traversing Animal List Backwards!!\n==================================\n\n");
 
 	// traverse the linked list moving backwards
-	while (zooKeeper != 0) {
+	while (zooKeeper != NULL) {
 
 		printf("%d year old, %d pound %s %s\n\n",
 			zooKeeper->age,
@@ -234,7 +234,7 @@ int main()
 	zooKeeper = lion1;
 
 	// traverse the linked list moving forward after delete operation
-	while (zooKeeper != 0) {
+	while (zooKeeper != NULL) {
 
 		printf("%d year old, %d pound %s %s\n\n",
 			zooKeeper->age,
@@ -250,6 +250,7 @@ int main()
 	free(lion2);
 	free(giraffe1);
 	free(zebra1);
+	free(zooKeeper);
 
 	return 1;
 }
