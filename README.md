@@ -9,3 +9,5 @@ animals in a zoo, and we create a function to search the list for certain animal
 and also a delete operation that will delete a specific node, but keep the list intact
 
 This example freely distributable under terms of MIT open source license
+
+michael.g.workman@gmail.com
